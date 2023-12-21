@@ -12,3 +12,18 @@ for example: psk:0123456789abcdef PSK CCMP CCMP
 The allowed AKM suites are PSK, FT/PSK, PSK/SHA-256
 The allowed Cipher suites are TKIP, CCMP, GCMP, GCMP-256, CCMP-256
 RTNETLINK answers: Operation not possible due to RF-kill
+
+
+key must be [d:]index:data where
+  'd:'     means default (transmit) key
+  'index:' is a single digit (0-3)
+  'data'   must be 5 or 13 ascii chars
+           or 10 or 26 hex digits
+for example: d:2:6162636465 is the same as d:2:abcde
+or psk:data <AKM Suite> <pairwise CIPHER> <groupwise CIPHER> where
+  'data' is the PSK (output of wpa_passphrase and the CIPHER can be CCMP or GCMP
+for example: psk:0123456789abcdef PSK CCMP CCMP
+The allowed AKM suites are PSK, FT/PSK, PSK/SHA-256
+The allowed Cipher suites are TKIP, CCMP, GCMP, GCMP-256, CCMP-256
+RTNETLINK answers: File exists
+Connected to bagr successfully!
